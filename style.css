@@ -7,6 +7,8 @@ body {
 	background: #f0f0f0;
 	width: 100%;
 	height: 100%;
+	font-size: 14px;
+	line-height: 1.42;
 }
 
 .wrapper {
@@ -135,4 +137,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb3e38', end
 		height: 0;
 		position: relative;
 	}
+}
+.menu_link {
+	display: block;
+	padding: 10px;
+
+}
+.menu_link_iconed {
+	padding-right: 20px;
+	padding-left: 50px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	position: relative;
+	border: 2px solid black;
+	border-radius: 50px;
+}
+.menu_link_text {
+	color: #fff
+	font-size:13px;
+}
+.menu_link_icon {
+	position: absolute;
+	left:13px;
+	top: 0;
+	bottom: 0;
+	width: 38px;
 }
