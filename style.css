@@ -5,6 +5,7 @@ html {
 
 body {
 	background: #f0f0f0;
+	margin: 0;
 	width: 100%;
 	height: 100%;
 	font-size: 14px;
@@ -98,18 +99,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb3e38', end
 }
 .search_input {
 	padding: 10px 40px 10px 35px;
-	background-color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.2);
 	border: 0 none;
 	border-radius: 50px;
-	opacity: 0.2; /* Полупрозрачный фон */
-    filter: alpha(Opacity=20);
-	color: black;  
+	color: white;  
 	outline: none;
 	width: 100%;
 
-	&::-webkit-input-placeholder {
-		color: black;
-	}
 }
 .search_submit {
 	background: url(icons8-поиск-24.png) 0 0 no-repeat;
@@ -126,18 +122,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb3e38', end
 }
 .menu_item {
 	display: inline-block;
+	
 }
 .menu {
 	text-align: justify;
+	margin-top: 0;
 
-	:after {
-		content: "   ";
+}
+ .menu::after {
+		content "";
 		display: inline-block;
 		width: 100%;
 		height: 0;
-		position: relative;
-	}
-}
+	}	
+
 .menu_link {
 	display: block;
 	padding: 10px;
@@ -149,11 +147,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb3e38', end
 	padding-top: 7px;
 	padding-bottom: 7px;
 	position: relative;
-	border: 2px solid black;
+	border: 2px solid rgb( 255 177 110);
 	border-radius: 50px;
 }
 .menu_link_text {
-	color: #fff
+	color: white;
 	font-size:13px;
 }
 .menu_link_icon {
@@ -162,4 +160,185 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb3e38', end
 	top: 0;
 	bottom: 0;
 	width: 38px;
+}
+.menu_link_icon_pic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+
+}
+.header_top {
+	padding: 20px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #ffffff20
+}
+.nav_list {
+
+	text-align: justify;
+
+}
+.nav_list:after {
+	content: "";
+	width: 100%;
+	height: 0%;
+	display: inline-block;
+}
+
+.nav_item {
+	display: inline-block;
+}
+
+
+.nav_icon, .nav_title {
+	display: inline-block;
+	vertical-align: middle;
+	}
+.nav_title:hover {
+	color: red;
+}
+
+.nav_title {
+	font-size: 12px;
+	color: #fff;
+	text-transform: uppercase;
+
+}
+ /*-------breadcrumbs-------*/
+
+ .breadcrumbs_item {
+ 	display: inline-block;
+ 	vertical-align: middle;
+ 	margin-left: 10px;
+ }
+ .breadcrumbs_item:first-child .breadcrumbs_link::before {
+ 	margin-left: 0;
+  	display:none;
+ 		
+ 	}
+
+ 
+ .breadcrumbs_link {
+ 	font-size: 11px;
+ 	vertical-align: middle;
+
+ }
+
+
+
+ .breadcrumbs_link:before {
+ 	content: "";
+ 	display: inline-block;
+ 	background: url(icons8-стрелка-вправо-в-круге-2-16.png) 0 0 no-repeat;
+ 	width: 17px;
+ 	height: 8px;
+ 	margin-right: 15px;
+ 	padding-top: 0;
+ 	vertical-align: middle;
+
+ }
+ .title {
+ 	font-size: 24px;
+ 	color: #2e2e2e;
+ 	margin-top: 0;
+ 	font-weight: normal;
+ }
+
+ /*------content-------*/
+ .content_wrapper .container {
+ 	background: #fff;
+
+ }
+ .content_wrapper .container:before {
+ 	content: "";
+ 	display: table;
+ }
+ .content_wrapper .container:after {
+ 	content: "";
+ 	display: table;
+ 	clear: both;
+ }
+ .seidebar {
+ 	float: left;
+ 	width: 25%;
+ 	
+ }
+ .content {
+ 	float: left;
+ 	width: 75%;
+ 	border-left: 1px solid #e7e7e7;
+ }
+ .products_item:before {
+ 	content: "";
+ 	display: table;
+ }
+ .products_item:after {
+ 	content: "";
+ 	display: table;
+ 	clear: both;
+ }
+ .products_slideshow {
+ 	float: left;
+ 	width: 30%;
+ 	padding: 25px;
+ }
+ .slidesow {
+	height: 235px;
+	position:relative;
+}
+.products_display_icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	max-height: 95%;
+	max-width: 95%;
+}
+
+ .products_desc {
+ 	float: left;
+ 	width: 45%;
+ }
+.products_price {
+	float: left;
+	width: 25%;
+}
+.slideshow_thumbus:before {
+ 	content: "";
+ 	display: table;
+ }
+ .slideshow_thumbus:after {
+ 	content: "";
+ 	display: table;
+ 	clear: both;
+ }
+ .slideshow_thumbus_item {
+ 	width: 25%;
+ 	float: left;
+ }
+ .slideshow_thumbus_link {
+ 	display: block;
+ 	height: 54px;
+ 	position: relative;
+
+ }
+..slideshow_thumbus_link img {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	max-height: 100%;
+	max-width: 100%;
+	margin: auto;
+
 }
